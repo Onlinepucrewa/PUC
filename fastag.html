@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FASTag सुविधा</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#eef2f7;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(45deg,#0d6efd,#0a58ca);
+    color:#fff;
+    text-align:center;
+    padding:20px 10px;
+}
+
+header h1{
+    font-size:30px;
+}
+
+header h2{
+    font-size:16px;
+    margin-top:5px;
+    font-weight:bold;
+    color:#00f7ff;
+}
+
+/* IMAGE GRID */
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:12px;
+    padding:12px;
+    padding-bottom:80px;
+}
+
+/* IMAGE BOX */
+.img-box{
+    position:relative;
+    border-radius:12px;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.img-box img{
+    width:100%;
+    height:auto;
+    object-fit:cover;
+    display: block;
+    transition:0.3s;
+}
+
+/* TEXT OVER IMAGE */
+.img-box h3{
+    position:absolute;
+    bottom:5px;
+    left:8px;
+    color:#fff;
+    font-size:13px;
+    background:rgba(0,0,0,0.5);
+    padding:3px 6px;
+    border-radius:5px;
+}
+
+/* HOVER */
+.img-box:hover img{
+    transform:scale(1.08);
+}
+
+/* BOTTOM BUTTON */
+.bottom-bar{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#fff;
+    display:flex;
+    padding:10px;
+    box-shadow:0 -3px 10px rgba(0,0,0,0.15);
+}
+
+.btn{
+    flex:1;
+    margin:0 6px;
+    padding:12px;
+    text-align:center;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:bold;
+    color:#fff;
+}
+
+.call-btn{
+    background:#ff9800;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>फास्टैग सुविधा</h1>
+    <h2>सभी कंपनी के फास्टैग उपलब्ध <br> SBI, IDFC, AXIS, ICICI, BAJAJ</h2>
+</header>
+
+<div class="container">
+
+    <div class="img-box">
+        <img src="card-1.png">
+        <h3>नया फास्टैग</h3>
+    </div>
+
+    <div class="img-box">
+        <img src="card-2.png">
+        <h3>रिप्लेसमेंट</h3>
+    </div>
+
+    <div class="img-box">
+        <img src="card-6.png">
+        <h3>फास्टैग चालू</h3>
+    </div>
+
+    <div class="img-box">
+        <img src="card-4.png">
+        <h3>KYC अपडेट कराये</h3>
+    </div>
+
+    <div class="img-box">
+        <img src="card-3.png">
+        <h3>हॉटलिस्ट & ब्लैकलिस्ट हटाए</h3>
+    </div>
+
+    <div class="img-box">
+        <img src="card-5.png">
+        <h3>फास्टैग बंद</h3>
+    </div>
+
+</div>
+
+<div class="bottom-bar">
+    <a href="tel:9131125001" class="btn call-btn">📞 Call Now</a>
+    <a href="https://wa.me/919131125001" target="_blank" class="btn whatsapp-btn">💬 WhatsApp</a>
+</div>
+
+</body>
+</html>

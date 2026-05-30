@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RTO Office Rewa</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+    background:#0b2c5f;
+    color:white;
+    flex-wrap:wrap;
+}
+
+.navbar h1{
+    font-size:20px;
+}
+
+.navbar a{
+    color:white;
+    margin:5px 10px;
+    text-decoration:none;
+}
+
+.btn{
+    background:orange;
+    padding:10px 15px;
+    border-radius:5px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    font-size:16px;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:40px 20px;
+    background:#0b2c5f;
+    color:white;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    max-width:500px;
+}
+
+.hero h2{
+    font-size:35px;
+}
+
+.hero img{
+    width:300px;
+    max-width:100%;
+}
+
+/* SERVICES */
+.services{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.service-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:15px;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* POPUP */
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.popup-content{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    width:90%;
+    max-width:350px;
+    line-height:1.6;
+}
+
+.popup-content h2{
+    margin-bottom:10px;
+}
+
+.line{
+    width:70%;
+    height:3px;
+    background:orange;
+    border:none;
+    margin:10px auto;
+}
+
+.btn-group{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.close{
+    float:right;
+    cursor:pointer;
+    font-size:20px;
+}
+h1{
+    font-size: 15px;
+}
+
+/* CONTACT */
+.contact{
+    padding:40px;
+    background:#fff;
+}
+
+.contact-box{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.contact-box div{
+    flex:1;
+}
+
+/* FLOAT BUTTON */
+.call-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#0b2c5f;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .navbar{
+        flex-direction:column;
+    }
+}
+
+/* FLOAT BUTTONS */
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    font-size:25px;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+}
+
+.call-float{
+    position:fixed;
+    bottom:80px;
+    right:20px;
+    background:#0b2c5f;
+    color:white;
+    font-size:25px;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+}
+
+/* FOOTER */
+.footer{
+    background:#0b2c5f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h1>RTO OFFICE REWA</h1>
+
+    <div>
+        <a href="PUC.HTML">Services</a>
+        <a href="ONLINE-PUC.HTML">Contact</a>
+    </div>
+
+    <a href="tel:9131125001" class="btn">📞 Call Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h2>RTO OFFICE REWA</h2>
+        <p>सभी RTO सेवाएं एक ही जगह</p><br>
+
+        <a href="https://wa.me/919131125001" class="btn">WhatsApp करें</a>
+    </div>
+    <br>
+    <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_1280.jpg">
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+    <h2>हमारी सेवाएं</h2><br>
+
+    <div class="service-box">
+        <div class="card" onclick="openPage()">Driving Licence</div>
+        <div class="card" onclick="fast()">Fastag</div>
+        <div class="card" onclick="window.open('https://puc.parivahan.gov.in/puc/views/PucCertificate.xhtml','_blank')">Check Online PUC</div>
+        <div class="card">Registration</div>
+        <div class="card">RC Transfer</div>
+        <div class="card" onclick="window.open('https://www.pbpartners.com','_blank')">Insurance all vehicle</div>
+    </div>
+</section>
+
+<script>
+function openPage() {
+  window.location.href = "driving.html";    
+}
+
+function fast() {
+  window.location.href = "fastag.html";
+}
+</script>
+
+<!-- CONTACT -->
+<section class="contact">
+    <h2>संपर्क करें</h2>
+    
+
+    <div class="contact-box">
+        <div>
+            <p><b>Address:</b> RTO Office Ratahara, Rewa (M.P.)</p>
+            <p><b>Mobile:</b> 9131125001</p>
+            <p><b>Time:</b> 10AM - 6PM</p>
+        </div>
+
+        <div>
+            <iframe src="https://maps.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3629.2232358324436!2d81.34865222550808!3d24.546946641087565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398450a50c477a05%3A0xb55e2cdb79d813a6!2sRegional%20Transport%20Office(RTO)%20Rewa!5e0!3m2!1sen!2sin!4v1780036430229!5m2!1sen!2sin""
+            width="100%" height="200"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 RTO Office Rewa | All Rights Reserved
+</div>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+
+        <span class="close" onclick="closePopup()">×</span>
+
+        <h2>RTO Office Rewa</h2>
+        <h1>किसी भी तरह का काम करवाने के लिए <br> कॉल या मैसेज कर सकते हैं |</h1><br>
+        1) पियूसी ऑनलाइन PUC
+        2) लाइसेंस बनाया जाता है 
+        3) लाइसेंस रिन्यूअल 
+        4) हैवी लाइसेंस बनाया जाता है 
+        5) गाड़ी रजिस्ट्रेशन रिन्यूअल 
+        6) गाड़ी ट्रांसफर 
+        7) बीमा सभी गाड़ियों का किया जाता है
+        8) सभी प्रकार के प्लास्टिक बनवाए 
+        9) गाड़ी के सभी चालान भरे जाते हैं 
+        10) परमिट 
+        11) HSRP <br>
+        <p>सभी RTO सेवाएं उपलब्ध हैं 🚗</p>
+
+
+        <hr class="line">
+
+        <div class="btn-group">
+            <a href="tel:9131125001" class="btn">📞 Call Now</a>
+            <a href="https://wa.me/919131125001" class="btn">💬 WhatsApp</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/919131125001" target="_blank" class="whatsapp-float">💬</a>
+<a href="tel:9131125001" class="call-float">📞</a>
+
+<!-- JS -->
+<script>
+// popup open
+window.onload = function(){
+    document.getElementById("popup").style.display="flex";
+}
+
+// close popup
+function closePopup(){
+    document.getElementById("popup").style.display="none";
+}
+</script>
+
+
+
+</body>
+</html>
+
+
+
